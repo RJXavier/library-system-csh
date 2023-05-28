@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{561E0584-B6AE-4DAE-BF79-FC47C4C75092}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryBookStore</RootNamespace>
+    <AssemblyName>LibraryBookStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="AdmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmLog.Designer.cs">
+      <DependentUpon>AdmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdFeatures.Designer.cs">
+      <DependentUpon>AdFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddManager.Designer.cs">
+      <DependentUpon>AddManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteManager.Designer.cs">
+      <DependentUpon>DeleteManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEntry.Designer.cs">
+      <DependentUpon>BookEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEdit.Designer.cs">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSearch.Designer.cs">
+      <DependentUpon>BookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookDelete.Designer.cs">
+      <DependentUpon>BookDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManFeatures.Designer.cs">
+      <DependentUpon>ManFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManLogin.Designer.cs">
+      <DependentUpon>ManLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewManager.Designer.cs">
+      <DependentUpon>ViewManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddManager.resx">
+      <DependentUpon>AddManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmLog.resx">
+      <DependentUpon>AdmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdFeatures.resx">
+      <DependentUpon>AdFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookDelete.resx">
+      <DependentUpon>BookDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookEdit.resx">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookEntry.resx">
+      <DependentUpon>BookEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSearch.resx">
+      <DependentUpon>BookSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteManager.resx">
+      <DependentUpon>DeleteManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManFeatures.resx">
+      <DependentUpon>ManFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManLogin.resx">
+      <DependentUpon>ManLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewManager.resx">
+      <DependentUpon>ViewManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
